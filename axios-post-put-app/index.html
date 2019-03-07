@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Axios post put</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding-top: 100px
+        }
+
+        .error {
+            background: red;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            padding: 10px;
+            border: rgba(0, 0, 0, .1);
+            background: rgba(0, 0, 0, .05);
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h3>Enviar un personaje mediante Axios</h3>
+
+                <form id="character-form" method="post" action="dondesea">
+                    <div>
+                        <label for="the-name-input"> Name: </label>
+                        <input type="text" name="name" class="the-name">
+                    </div>
+
+                    <div>
+                        <label for="the-occupation-input"> Occupation: </label>
+                        <input type="text" name="occupation" class="the-occupation">
+                    </div>
+
+                    <div>
+                        <label for="the-weapon-input"> Weapon: </label>
+                        <input type="text" name="weapon" class="the-weapon">
+                    </div>
+
+                    <button> Save </button>
+                </form>
+
+                <ul id="characters-list"></ul>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h3>Actualizar un personaje mediante Axios</h3>
+
+                <form id="show-info-form">
+                    <input type="text" name="" id="char-id">
+                    <button type="submit" id="getButton">Get the character</button>
+                </form>
+
+                <hr>
+
+                <form id="update-form">
+                    <div>
+                        <label for="update-name-input"> Name: </label>
+                        <input type="text" name="name" class="the-name">
+                    </div>
+
+                    <div>
+                        <label for="update-occupation-input"> Occupation: </label>
+                        <input type="text" name="occupation" class="the-occupation">
+                    </div>
+
+                    <div>
+                        <label for="update-weapon-input"> Weapon: </label>
+                        <input type="text" name="weapon" class="the-weapon">
+                    </div>
+
+                    <button> Update </button>
+                </form>
+
+                <p id="character-result"></p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
